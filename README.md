@@ -10,7 +10,7 @@
 	1. `pip install ezdxf`
 	1. `pip install pyyaml`
 	1. `git clone https://github.com/novakpetrovic/waiata.git`
-	1. `move /Y waiata\*.* .` 
+	1. `copy /Y waiata\*.* .` 
 	1. `rmdir /S /Q waiata`
 	1. `Scripts\deactivate.bat`
 	1. `exit`
