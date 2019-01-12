@@ -1,38 +1,31 @@
 # Bugs, Notes & Future Development
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# TODO:: Layers?
-# TODO:: Colours?
-# TODO:: Page format?
-# TODO:: Page border?
-# TODO:: How big will the numbers be?
 
 settings:
   
-  # x coordinate of the bottom-left frame corner ("origin" point)
-  origin_x: 87
-  
-  # y coordinate of the bottom-left frame corner ("origin" point)
-  origin_y: 156
-  
-  # Value of the origin x coordinate
+  # Value of the x coordinate
   # You can use _ (underscore) as thousands separator
-  value_x: 2_456_125
+  # This value is expected to be around 6_000_000
+  value_x: 6_789_875
   
-  # Value of the origin y coordinate
+  # Value of the y coordinate
   # You can use _ (underscore) as thousands separator
-  value_y: 6_555_175
+  # This value is expected to be around 4_000_000
+  value_y: 4_321_925
   
   # Frame border width (along x axis)
-  frame_width: 1018
+  frame_width: 300
   
   # Frame border height (along y axis)
-  frame_height: 453
+  frame_height: 200
+  
+  # Layer name
+  # MUST SURROUND WITH APOSTROPHES ' & '
+  layer_name: 'OKVIR'
   
   # File name under which to save the dxf, in the local directory
+  # MUST SURROUND WITH APOSTROPHES ' & '
   save_as_filename: '3_and_get_your_drawing.dxf'
-  
-  # First standard value on each axis
-  first_standard_value: 200
   
   # Defines desired tick spacing (calculated automatically for the first tick)
   tick_spacing: 100
@@ -48,11 +41,13 @@ settings:
   
   # Do not change unless you know what you're doing!
   # Digit width as a (measured) ratio of digit height (further divided by 2 in code)
-  # ENTER VALUE AS A PERCENTAGE, E.G. 43 MEANS 43%
-  digit_width_ratio: 43
+  # ENTER VALUE AS A PERCENTAGE, E.G. 43 MEANS 43%  digit_width_ratio: 43
   
-  # Text alignment string
-  text_alignment: TOP_LEFT
+  # Text alignment string, for x-axis labels
+  x_text_alignment: TOP_RIGHT
+  
+  # Text alignment string, for y-axis labels
+  y_text_alignment: TOP_LEFT
   
   # DWG drawing standard string (see ezdxf documentation)
   dwg_standard: 'R2018'
