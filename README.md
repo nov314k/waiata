@@ -1,3 +1,5 @@
+Python script to generate a surveying map frame, in dxf format, using ezdxf library.
+
 ## Installation instructions
 
 1. Install [Python 3](http://www.python.org)
