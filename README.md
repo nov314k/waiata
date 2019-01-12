@@ -3,6 +3,7 @@ Python script to generate a surveying map frame, in dxf format, using ezdxf libr
 ## Installation instructions
 
 1. Install [Python 3](http://www.python.org)
+1. Install [Git](https://git-scm.com/downloads)
 1. Create destination folder for the installation
 1. Open command prompt, change into the working folder (created above), and execute the following commands:
 	1. `pip install virtualenv`
