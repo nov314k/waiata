@@ -1,0 +1,58 @@
+# Bugs, Notes & Future Development
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# TODO:: Layers?
+# TODO:: Colours?
+# TODO:: Page format?
+# TODO:: Page border?
+# TODO:: How big will the numbers be?
+
+settings:
+  
+  # x coordinate of the bottom-left frame corner ("origin" point)
+  origin_x: 87
+  
+  # y coordinate of the bottom-left frame corner ("origin" point)
+  origin_y: 156
+  
+  # Value of the origin x coordinate
+  # You can use _ (underscore) as thousands separator
+  value_x: 2_456_125
+  
+  # Value of the origin y coordinate
+  # You can use _ (underscore) as thousands separator
+  value_y: 6_555_175
+  
+  # Frame border width (along x axis)
+  frame_width: 1018
+  
+  # Frame border height (along y axis)
+  frame_height: 453
+  
+  # File name under which to save the dxf, in the local directory
+  save_as_filename: '3_and_get_your_drawing.dxf'
+  
+  # First standard value on each axis
+  first_standard_value: 200
+  
+  # Defines desired tick spacing (calculated automatically for the first tick)
+  tick_spacing: 100
+  
+  # Height/width of the tick mark, measured from each axis (and then to up/down, and left/righ)
+  # ENTER VALUE AS A PERCENTAGE, E.G. 0.75 MEANS 0.75% 
+  # Resulting value for drawing = tick_half_size * max(frame_width, frame_height) / 100
+  tick_half_size: 0.75
+  
+  # Text height, AS PERCENTAGE VALUE (E.G. 1.5 MEANS 1.5%) 
+  # Resulting value for drawing = text_height * max(frame_width, frame_height) / 100
+  text_height: 1.5
+  
+  # Do not change unless you know what you're doing!
+  # Digit width as a (measured) ratio of digit height (further divided by 2 in code)
+  # ENTER VALUE AS A PERCENTAGE, E.G. 43 MEANS 43%
+  digit_width_ratio: 43
+  
+  # Text alignment string
+  text_alignment: TOP_LEFT
+  
+  # DWG drawing standard string (see ezdxf documentation)
+  dwg_standard: 'R2018'
