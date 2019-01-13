@@ -13,17 +13,25 @@ with open('1_change_settings_first.yaml', 'r') as stream:
 	except yaml.YAMLError as ex:
 		print(ex)
 
-dwg = ezdxf.new(file['settings']['dwg_standard'])msp = dwg.modelspace()
+dwg = ezdxf.new(file['settings']['dwg_standard'])
+msp = dwg.modelspace()
 
 value_x = file['settings']['value_x']
 value_y = file['settings']['value_y']
-origin_x = value_xorigin_y = value_ylayer_name = file['settings']['layer_name']frame_width = file['settings']['frame_width']tick_spacing = file['settings']['tick_spacing']frame_height = file['settings']['frame_height']
+origin_x = value_x
+origin_y = value_y
+layer_name = file['settings']['layer_name']
+frame_width = file['settings']['frame_width']tick_spacing = file['settings']['tick_spacing']
+frame_height = file['settings']['frame_height']
 x_text_alignment = file['settings']['x_text_alignment']
 y_text_alignment = file['settings']['y_text_alignment']save_as_filename = file['settings']['save_as_filename']
 
-text_height = file['settings']['text_height']text_height = text_height * max(frame_width, frame_height) / 100digit_width_ratio = file['settings']['digit_width_ratio']offset_x = (digit_width_ratio) * text_height / 100
+text_height = file['settings']['text_height']
+text_height = text_height * max(frame_width, frame_height) / 100
+digit_width_ratio = file['settings']['digit_width_ratio']offset_x = (digit_width_ratio) * text_height / 100
 offset_y = offset_x
-tick_half_size = file['settings']['tick_half_size']tick_half_size = tick_half_size * max(frame_width, frame_height) / 100
+tick_half_size = file['settings']['tick_half_size']
+tick_half_size = tick_half_size * max(frame_width, frame_height) / 100
 dwg.layers.new(name = layer_name, dxfattribs = {'color': 0})
 line_attribs = {'layer': layer_name}
 x_text_attribs = {'height': text_height, 'layer': layer_name, 'rotation': 90}
@@ -32,7 +40,8 @@ y_text_attribs = {'height': text_height, 'layer': layer_name}
 msp.add_line(
 	(origin_x, origin_y),
 	(origin_x + frame_width, origin_y),
-	dxfattribs = line_attribs)msp.add_line(
+	dxfattribs = line_attribs)
+msp.add_line(
 	(origin_x + frame_width, origin_y),
 	(origin_x + frame_width, origin_y + frame_height),
 	dxfattribs = line_attribs)msp.add_line(
