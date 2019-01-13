@@ -47,7 +47,8 @@ msp.add_line(
 	dxfattribs = line_attribs)msp.add_line(
 	(origin_x + frame_width, origin_y + frame_height),
 	(origin_x, origin_y + frame_height),
-	dxfattribs = line_attribs)msp.add_line(
+	dxfattribs = line_attribs)
+msp.add_line(
 	(origin_x, origin_y + frame_height),
 	(origin_x, origin_y),
 	dxfattribs = line_attribs)
@@ -64,7 +65,7 @@ msp.add_text(x_text_2, dxfattribs = x_text_attribs).set_pos(
 msp.add_text(x_text_1, dxfattribs = x_text_attribs).set_pos(
 	(origin_x - 3*offset_x - 2*text_height, origin_y - 2*offset_y),
 	align = x_text_alignment)
-
+	
 current_position = origin_x + distance_to_first_standard_value(x_text_3)
 while current_position < origin_x + frame_width:
 	msp.add_line(
@@ -100,5 +101,5 @@ while current_position < origin_y + frame_height:
 		(origin_x	 + frame_width + 2*offset_x, current_position + offset_y),
 		align = y_text_alignment)
 	current_position += tick_spacing
-
+	
 dwg.saveas(save_as_filename)
